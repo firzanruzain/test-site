@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milestone Form</title>
+    <link rel="icon" type="image/png" href="../assets/main_logo.png" />
     <link rel="stylesheet" href="../css/form-style.css">
     <link rel="stylesheet" href="../css/calendar-style.css">
     <link rel="stylesheet" href="../css/project-page.css">
     <link rel="stylesheet" href="../css/common-ui.css">
     <link rel="stylesheet" href="../css/nav-bar.css">
-    <link rel="stylesheet" href="../css/footer.css">
 
     <style>
         .icon-button {
@@ -32,6 +32,25 @@
             bottom: 0;
             left: 0;
         }
+
+        .inner-dropdown {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .inner-dropdown.show {
+            display: block;
+        }
+
+        .dropdown-button {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 
@@ -45,7 +64,9 @@
         </div>
         <div id="logo"></div>
         <button id="home" onclick="navigateTo('home')">
-            <img src="../assets/home.png" alt="Home Icon">
+            <a href="../user-management-mgt/user-dashboard-page.html" id="home">
+                <img src="../assets/home.png" alt="home icon" />
+              </a>
         </button>
     </header>
 
@@ -61,31 +82,19 @@
             <ul id="side-menu-shortcuts">
                 <li class="side-menu-dropdown-list">
                     <button class="menu-button dropdown-button">
-                        <span class="menu-label">Shortcut 1</span>
+                        <span class="menu-label">Project Management </span>
                         <span class="expand-icon"></span>
                     </button>
                     <ul class="inner-dropdown">
-                        <li class="inner-dropdown-list"><a class="menu-button" href="#">Inner Shortcut</a></li>
+                        <li class="inner-dropdown-list">
+                            <a class="menu-button" href="../final-report-submission-mgt/final-report-submission-page.html">Final Report Submission</a>
+                        </li>
+                        <li class="inner-dropdown-list">
+                            <a class="menu-button" href="../project-management-mgt/project-timeline-planning.html">Project Timeline Planning</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="side-menu-dropdown-list">
-                    <button class="menu-button dropdown-button">
-                        <span class="menu-label">Shortcut 2</span>
-                        <span class="expand-icon"></span>
-                    </button>
-                    <ul class="inner-dropdown">
-                        <li class="inner-dropdown-list"><a class="menu-button" href="#">Inner Shortcut 2</a></li>
-                    </ul>
-                </li>
-                <li class="side-menu-dropdown-list">
-                    <button class="menu-button dropdown-button">
-                        <span class="menu-label">Shortcut 3</span>
-                        <span class="expand-icon"></span>
-                    </button>
-                    <ul class="inner-dropdown">
-                        <li class="inner-dropdown-list"><a class="menu-button" href="#">Inner Shortcut 3</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </nav>
 
@@ -139,6 +148,9 @@
 
     <!-- JavaScript -->
     <script>
+
+        src="../scripts/side-menu.js"
+
         // Navigation Functionality
         function navigateTo(destination) {
             if (destination === 'menu') {
@@ -152,6 +164,18 @@
         document.getElementById('milestone-form').addEventListener('submit', function (e) {
             e.preventDefault(); // Prevent actual form submission
             alert("Milestone form has been submitted!");
+        });
+
+        // Dropdown toggle functionality
+        const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+        dropdownButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const dropdown = button.nextElementSibling;
+                if (dropdown) {
+                    dropdown.classList.toggle("show");
+                }
+            });
         });
     </script>
 </body>

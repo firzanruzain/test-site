@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposal Management</title>
+    <link rel="icon" type="image/x-icon" href="../assets/main_logo.png">
     <link rel="stylesheet" href="../css/proposal-management-style.css">
     <link rel="stylesheet" href="../css/common-ui.css">
 </head>
@@ -14,7 +15,7 @@
             <div class="menubutton"><input title="side-menu" type="checkbox" id="user-side-menu"><label
                     for="user-side-menu" class="fas"></label></div>
             <div id="logo"></div>
-            <button id="home"><img src="../assets/home.png" alt="home icon"></a></button>
+            <button id="home"><a href="../user-management-mgt/user-dashboard-page.html"><img src="../assets/home.png" alt="home icon"></a></button>
         </header>
         <!-- Main Content -->
         <div class="container">
@@ -25,22 +26,24 @@
                 <ul id="side-menu-shortcuts">
                     <li class="side-menu-dropdown-list">
                         <button class="menu-button dropdown-button">
-                            <span class="menu-label">Shortcut 1</span>
+                            <span class="menu-label">User Management</span>
                             <span class="expand-icon"></span>
                         </button>
                         <ul class="inner-dropdown">
-                            <li class="inner-dropdown-list"><a class="menu-button" href="#lancau">Inner Shortcut</a>
-                            </li>
+                            <li class="inner-dropdown-list"><a class="menu-button" href="../user-management-mgt/user-dashboard-page.html"> Dashboard</a></li>
+                            <li class="inner-dropdown-list"><a class="menu-button" href="../user-management-mgt/about-us-page.html">About Us</a></li>
                         </ul>
                     </li>
                     <li class="side-menu-dropdown-list">
-                        <button class="menu-button"><span class="menu-label">Shortcut 1</span> <span
-                                class="expand-icon"></span></button>
+                        <button class="menu-button dropdown-button"><span class="menu-label">Project Proposal Management </span> <span
+                                class="expand-icon"></span>
+                        </button>
+                        <ul class="inner-dropdown">
+                            <li class="inner-dropdown-list"><a class="menu-button" href="../project-proposal-mgt/new-proposals-management-page.html"> New Proposals</a></li>
+                            <li class="inner-dropdown-list"><a class="menu-button" href="../project-proposal-mgt/proposal-management-page.html">All Proposals</a></li>
+                        </ul>
                     </li>
-                    <li class="side-menu-dropdown-list">
-                        <button class="menu-button"><span class="menu-label">Shortcut 1</span><span
-                                class="expand-icon"></span></button>
-                    </li>
+                
                 </ul>
             </nav>
             <!-- Proposal Table Section -->
@@ -104,6 +107,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="../scripts/side-menu.js"></script>
     <script src="../scripts/table_search.js"></script>
     <script src="../scripts/checkbox.js"></script>
 

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/main_logo.png">
     <title>Communication Page</title>
     <link rel="stylesheet"
         href="https://db.onlinewebfonts.com/c/65dc1b4fb1cd6bf31e730421533dafc7?family=ITC+Avant+Garde+Gothic+W02+Md">
@@ -18,7 +19,8 @@
             <div class="menubutton"><input title="side-menu" type="checkbox" id="user-side-menu"><label
                     for="user-side-menu" class="fas"></label></div>
             <div id="logo"></div>
-            <button id="home"><img src="../assets/home.png" alt="home icon"></a></button>
+            <button id="home"><a href="../user-management-mgt/user-dashboard-page.html"><img src="../assets/home.png"
+                        alt="home icon"></a></button>
         </header>
 
         <!-- Main Container -->
@@ -30,23 +32,76 @@
                     <input type="text" id="search-bar" placeholder="Search">
                 </div>
                 <ul id="side-menu-shortcuts">
+            
+                    <!-- Dropdown List -->
                     <li class="side-menu-dropdown-list">
                         <button class="menu-button dropdown-button">
-                            <span class="menu-label">Shortcut 1</span>
+                            <span class="menu-label">User Management</span>
                             <span class="expand-icon"></span>
                         </button>
+            
+                        <!-- Inner Dropdown List -->
                         <ul class="inner-dropdown">
-                            <li class="inner-dropdown-list"><a class="menu-button" href="#lancau">Inner Shortcut</a>
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../user-management-mgt/user-dashboard-page.html">Supervisor Dashboard</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../user-management-mgt/about-us-page.html">About Us</a>
                             </li>
                         </ul>
                     </li>
+            
                     <li class="side-menu-dropdown-list">
-                        <button class="menu-button"><span class="menu-label">Shortcut 1</span> <span
-                                class="expand-icon"></span></button>
+                        <button class="menu-button dropdown-button"><span class="menu-label">Project & Proposal</span>
+                            <span class="expand-icon"></span>
+                        </button>
+            
+                        <ul class="inner-dropdown">
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../project-management-mgt/projectmanagement.html">Projects</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../project-proposal-mgt/proposal-management-page.html">All
+                                    Proposal</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../project-proposal-mgt/proposal-submission-page.html">New Proposal</a>
+                            </li>
+                        </ul>
                     </li>
+            
                     <li class="side-menu-dropdown-list">
-                        <button class="menu-button"><span class="menu-label">Shortcut 1</span><span
-                                class="expand-icon"></span></button>
+                        <button class="menu-button dropdown-button">
+                            <span class="menu-label">Meeting & Presentation</span>
+                            <span class="expand-icon"></span>
+                        </button>
+            
+                        <!-- Inner Dropdown List -->
+                        <ul class="inner-dropdown">
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../meeting-mgt/meeting-management-page.html">All Meetings</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../meeting-mgt/meeting-scheduler-page.html">New Meeting</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../meeting-mgt/meeting-log-update-page.html">Meeting Logs</a>
+                            </li>
+            
+                            <li class="inner-dropdown-list"><a class="menu-button"
+                                    href="../meeting-mgt/presentation-management-page.html">All Presentations</a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                    <li class="side-menu-dropdown-list">
+                        <button onclick="location.href='../communication/comm-page.html'" class="menu-button"><span
+                                class="menu-label">Communication</span>
                     </li>
                 </ul>
             </nav>
@@ -63,13 +118,13 @@
                         </li>
                         <li class="chat-menu-list">
                             <button type="button" class="chat-button">
-                                <span class="chat-label">Moana 2</span>
+                                <span class="chat-label">Mohana</span>
                                 <span class="chat-icon admin-chat-icon"></span>
                             </button>
                         </li>
                         <li class="chat-menu-list">
                             <button type="button" class="chat-button">
-                                <span class="chat-label">Anak2 Deepak</span>
+                                <span class="chat-label">Miauu Miauu</span>
                                 <span class="chat-icon group-chat-icon"></span>
                             </button>
                         </li>
@@ -108,7 +163,7 @@
                                 <h4 class="chat-sender-name">Deepak Kumar</h1>
                                     <div class="chat-bubble">
                                         <p class="chat-date">21/12/2024</p>
-                                        <p class="chat-text">In my bedroom. hehe</p>
+                                        <p class="chat-text">Lorem ipsum dolor sit amet.</p>
                                         <p class="chat-time">11:37 AM</p>
                                     </div>
                             </section>
@@ -119,11 +174,7 @@
                                 <h4 class="chat-sender-name">You</h1>
                                     <div class="chat-bubble">
                                         <p class="chat-date">21/12/2024</p>
-                                        <p class="chat-text">Lorem ipsum odor amet, consectetuer adipiscing elit.
-                                            Ultricies senectus curabitur litora cras, id curabitur. Mauris
-                                            augue at diam gravida nisi. Montes placerat tempor dis pulvinar rhoncus
-                                            sodales imperdiet est. Curae elit ornare
-                                            facilisis sem ex. Mollis fermentum sociosqu suscipit bibendum imperdiet
+                                        <p class="chat-text">Mollis fermentum sociosqu suscipit bibendum imperdiet
                                             risus.</p>
                                         <p class="chat-time">11:40 AM</p>
                                     </div>
@@ -145,7 +196,6 @@
                                     </div>
                             </section>
                         </li>
-
                     </ul>
 
                 </div>
@@ -154,25 +204,11 @@
 
         </div>
 
+        <script src="../scripts/side-menu.js"></script>
+
         <script>
             /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            var dropdown = document.getElementsByClassName("dropdown-button");
             var chatButton = document.getElementsByClassName("chat-button");
-            var chatIcon = document.getElementsByClassName("chat-icon");
-            var menuButton = document.getElementsByClassName("menubutton");
-
-            for (i = 0; i < dropdown.length; i++) {
-                dropdown[i].addEventListener("click", function () {
-                    this.parentNode.classList.toggle("expanded");
-                    var dropdownContent = this.parentNode.querySelector('ul.inner-dropdown');
-                    dropdownContent.classList.toggle("slideDown");
-                    if (dropdownContent.style.display === "block") {
-                        dropdownContent.style.display = "none";
-                    } else {
-                        dropdownContent.style.display = "block";
-                    }
-                });
-            }
 
             for (i = 0; i < chatButton.length; i++) {
                 chatButton[i].addEventListener("click", function () {
